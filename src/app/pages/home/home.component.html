@@ -1,0 +1,53 @@
+<nav class="navbar navbar-expand-lg"
+    style="background-color: rgb(84, 84, 251);">
+    <div class="container-fluid">
+        <a class="navbar-brand text-white" routerLink="/">Railway</a>
+
+        <ul class="navbar-nav d-flex flex-row">
+            <li class="nav-item" style="padding-right: 8px;">
+                <a class="nav-link text-white" routerLink="/">Home</a>
+            </li>
+            <li class="nav-item" style="padding-right: 8px;">
+                <a class="nav-link text-white" routerLink="/trains">Trains</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" routerLink="/login">Login</a>
+            </li>
+        </ul>
+
+    </div>
+</nav>
+
+<h1 class="text-center m-4">Book Ticket</h1>
+
+
+<div class="d-flex align-items-center justify-content-center">
+    <form class="me-3" >
+        <div class="d-flex flex-row mb-3">
+            <div class="me-3">
+                <label class="form-label">From Station</label>
+                <select class="form-select">
+                    <option selected>Select station</option>
+                    <option *ngFor="let s of stations" value="s" >{{s}}</option>
+                </select>
+            </div>
+            <div>
+                <label class="form-label">To Station</label>
+                <select class="form-select">
+                    <option selected>Select station</option>
+                    <option *ngFor="let s of stations" value="s" >{{s}}</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Date Of Travel</label>
+            <input type="date" class="form-control w-100" style="max-width: 143px;">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <img src="https://images.railyatri.in/ry_images_prod/rail-min-min-1646638920.png"
+     height="200">
+</div>
